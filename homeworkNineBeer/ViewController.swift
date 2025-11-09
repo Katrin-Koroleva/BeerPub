@@ -16,7 +16,7 @@ private enum Constants {
     
     static let labelColor : UIColor = .cyan
     static let textColor : UIColor = .black
-    static let buttonColor : UIColor = .magenta
+    static let buttonColor : UIColor = .gray
 }
 
 final class ViewController: UIViewController {
@@ -416,4 +416,5 @@ final class ViewController: UIViewController {
 
     }
 }
+
 
