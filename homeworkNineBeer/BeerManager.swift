@@ -47,7 +47,7 @@ class beerManager {
         for beer in beers {
             beer.sellBeer()
             
-            text = text + "\(beer.name) : \(beer.soldQuantity) * \(beer.price) = \(beer.getSoldPrice())$ "
+            text = text + "\(beer.name) : \(beer.soldQuantity) * \(beer.price) = \(beer.getSoldPrice())$\n"
             soldPrice = soldPrice + beer.getSoldPrice()
         }
         

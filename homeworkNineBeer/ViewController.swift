@@ -3,8 +3,6 @@ import UIKit
 import SnapKit
 
 private enum Constants {
-    static let widthBig : CGFloat = 360
-    static let widthSmall : CGFloat = 170
     static let heightBig : CGFloat = 50
     static let heightSmall : CGFloat = 40
     static let squareButtonSize : CGFloat = 40
@@ -203,23 +201,23 @@ final class ViewController: UIViewController {
         super.viewDidLayoutSubviews()
         
         // labels
-        let xHeaderLabel = self.view.frame.width / 2 - Constants.widthBig / 2
+        // let xHeaderLabel = self.view.frame.width / 2 - Constants.widthBig / 2
         // let yHeaderLabel = self.view.frame.height / 10
         
         // let xLabelOne = self.view.frame.width / 2 - Constants.widthSmall / 2
-        let yLabelOne = self.view.frame.height / 10 + Constants.heightBig + Constants.offsetHeight
+        // let yLabelOne = self.view.frame.height / 10 + Constants.heightBig + Constants.offsetHeight
         // let yQuantityLabelOne = yLabelOne + Constants.heightSmall
         
         // let xLabelTwo = xLabelOne
-        let yLabelTwo = yLabelOne + 2 * Constants.heightSmall + Constants.offsetHeight
+        // let yLabelTwo = yLabelOne + 2 * Constants.heightSmall + Constants.offsetHeight
         // let yQuantityLabelTwo = yLabelTwo + Constants.heightSmall
         
         // let xLabelThree = xLabelOne
-        let yLabelThree = yLabelTwo + 2 * Constants.heightSmall + Constants.offsetHeight
+        // let yLabelThree = yLabelTwo + 2 * Constants.heightSmall + Constants.offsetHeight
         // let yQuantityLabelThree = yLabelThree + Constants.heightSmall
         
-        let xResultLabel = xHeaderLabel
-        let yResultLabel = yLabelThree + 2 * Constants.heightSmall + Constants.offsetHeight
+        // let xResultLabel = xHeaderLabel
+        // let yResultLabel = yLabelThree + 2 * Constants.heightSmall + Constants.offsetHeight
         
         
         // self.headerLabel.frame = CGRect(x: xHeaderLabel, y: yHeaderLabel, width: Constants.widthBig, height: Constants.heightBig)
@@ -243,22 +241,22 @@ final class ViewController: UIViewController {
         // let xButtonEnd = xButtonStart + Constants.widthSmall + Constants.offsetBetweenButtons
         // let yButtonStartEnd = yResultLabel + Constants.resultLabelHeight + 2 * Constants.offsetHeight + Constants.heightSmall
         
-        let xLeftSqusreButton = ((Constants.widthBig - Constants.widthSmall) / 2) / 2 - ( Constants.squareButtonSize / 2 ) + (self.view.frame.width - Constants.widthBig) / 2
-        let xRightSquareButton = self.view.frame.width - xLeftSqusreButton - Constants.squareButtonSize
-        let yFirstRawButton = yLabelOne + Constants.heightSmall - ( Constants.squareButtonSize / 2 )
-        let ySecondRawButton = yLabelTwo + Constants.heightSmall - ( Constants.squareButtonSize / 2 )
-        let yThirdRawButton = yLabelThree + Constants.heightSmall - ( Constants.squareButtonSize / 2 )
+        // let xLeftSqusreButton = ((Constants.widthBig - Constants.widthSmall) / 2) / 2 - ( Constants.squareButtonSize / 2 ) + (self.view.frame.width - Constants.widthBig) / 2
+        // let xRightSquareButton = self.view.frame.width - xLeftSqusreButton - Constants.squareButtonSize
+        // let yFirstRawButton = yLabelOne + Constants.heightSmall - ( Constants.squareButtonSize / 2 )
+        // let ySecondRawButton = yLabelTwo + Constants.heightSmall - ( Constants.squareButtonSize / 2 )
+        // let yThirdRawButton = yLabelThree + Constants.heightSmall - ( Constants.squareButtonSize / 2 )
         
         // self.sellButton.frame = CGRect(x: xButton, y: yButton, width: Constants.widthSmall, height: Constants.heightSmall)
         // self.startDayButton.frame = CGRect(x: xButtonStart, y: yButtonStartEnd, width: Constants.widthSmall, height: Constants.heightSmall)
         // self.endDayButton.frame = CGRect(x: xButtonEnd, y: yButtonStartEnd, width: Constants.widthSmall, height: Constants.heightSmall)
         
-        self.firstRawMinusButton.frame = CGRect(x: xLeftSqusreButton, y: yFirstRawButton, width: Constants.squareButtonSize, height: Constants.squareButtonSize)
-        self.firstRawPlusButton.frame = CGRect(x: xRightSquareButton, y: yFirstRawButton, width: Constants.squareButtonSize, height: Constants.squareButtonSize)
-        self.secondRawMinusButton.frame = CGRect(x: xLeftSqusreButton, y: ySecondRawButton, width: Constants.squareButtonSize, height: Constants.squareButtonSize)
-        self.secondRawPlusButton.frame = CGRect(x: xRightSquareButton, y: ySecondRawButton, width: Constants.squareButtonSize, height: Constants.squareButtonSize)
-        self.thirdRawMinusButton.frame = CGRect(x: xLeftSqusreButton, y: yThirdRawButton, width: Constants.squareButtonSize, height: Constants.squareButtonSize)
-        self.thirdRawPlusButton.frame = CGRect(x: xRightSquareButton, y: yThirdRawButton, width: Constants.squareButtonSize, height: Constants.squareButtonSize)
+        // self.firstRawMinusButton.frame = CGRect(x: xLeftSqusreButton, y: yFirstRawButton, width: Constants.squareButtonSize, height: Constants.squareButtonSize)
+        // self.firstRawPlusButton.frame = CGRect(x: xRightSquareButton, y: yFirstRawButton, width: Constants.squareButtonSize, height: Constants.squareButtonSize)
+        // self.secondRawMinusButton.frame = CGRect(x: xLeftSqusreButton, y: ySecondRawButton, width: Constants.squareButtonSize, height: Constants.squareButtonSize)
+        // self.secondRawPlusButton.frame = CGRect(x: xRightSquareButton, y: ySecondRawButton, width: Constants.squareButtonSize, height: Constants.squareButtonSize)
+        // self.thirdRawMinusButton.frame = CGRect(x: xLeftSqusreButton, y: yThirdRawButton, width: Constants.squareButtonSize, height: Constants.squareButtonSize)
+        // self.thirdRawPlusButton.frame = CGRect(x: xRightSquareButton, y: yThirdRawButton, width: Constants.squareButtonSize, height: Constants.squareButtonSize)
         
     }
     
@@ -371,37 +369,67 @@ final class ViewController: UIViewController {
         self.view.addSubview(firstRawMinusButton)
         let firstRawMinusAction = UIAction { _ in self.firstRawMinusButtonPressed() }
         firstRawMinusButton.addAction(firstRawMinusAction, for : .touchUpInside)
+        
         self.firstRawMinusButton.snp.makeConstraints { make in
-            
+            make.right.equalTo(beerOneLabel.snp.left).offset(-10)
+            make.height.equalTo(Constants.squareButtonSize)
+            make.width.equalTo(Constants.squareButtonSize)
+            make.top.equalTo(headerLabel.snp.bottom).offset(50)
         }
         
         self.view.addSubview(firstRawPlusButton)
         let firstRawPlusAction = UIAction{ _ in self.firstRawPlusButtonPressed() }
         firstRawPlusButton.addAction(firstRawPlusAction, for: .touchUpInside)
         
-        self.view.addSubview(secondRawMinusButton)
-        let secondRawMinusAction = UIAction { _ in
-            self.secondRawMinusButtonPressed()
+        self.firstRawPlusButton.snp.makeConstraints { make in
+            make.left.equalTo(beerOneLabel.snp.right).offset(10)
+            make.height.equalTo(Constants.squareButtonSize)
+            make.width.equalTo(Constants.squareButtonSize)
+            make.top.equalTo(headerLabel.snp.bottom).offset(50)
         }
+        
+        self.view.addSubview(secondRawMinusButton)
+        let secondRawMinusAction = UIAction { _ in self.secondRawMinusButtonPressed() }
         secondRawMinusButton.addAction(secondRawMinusAction, for: .touchUpInside)
         
-        self.view.addSubview(secondRawPlusButton)
-        let secondRawPlusAction = UIAction { _ in
-            self.secondRawPlusButtonPressed()
+        self.secondRawMinusButton.snp.makeConstraints { make in
+            make.height.equalTo(Constants.squareButtonSize)
+            make.width.equalTo(Constants.squareButtonSize)
+            make.right.equalTo(beerTwoLabel.snp.left).offset(-10)
+            make.top.equalTo(beerOneQuantityLabel.snp.bottom).offset(50)
         }
+        
+        self.view.addSubview(secondRawPlusButton)
+        let secondRawPlusAction = UIAction { _ in self.secondRawPlusButtonPressed() }
         secondRawPlusButton.addAction(secondRawPlusAction, for: .touchUpInside)
+        self.secondRawPlusButton.snp.makeConstraints { make in
+            make.height.equalTo(Constants.squareButtonSize)
+            make.width.equalTo(Constants.squareButtonSize)
+            make.left.equalTo(beerTwoLabel.snp.right).offset(10)
+            make.top.equalTo(beerOneQuantityLabel.snp.bottom).offset(50)
+        }
         
         self.view.addSubview(thirdRawMinusButton)
-        let thirdRawMinusAction = UIAction { _ in
-            self.thirdRawMinusButtonPressed()
-        }
+        let thirdRawMinusAction = UIAction { _ in self.thirdRawMinusButtonPressed() }
         thirdRawMinusButton.addAction(thirdRawMinusAction, for: .touchUpInside)
         
-        self.view.addSubview(thirdRawPlusButton)
-        let thirdRawPlusAction = UIAction { _ in
-            self.thirdRawPlusButtonPressed()
+        self.thirdRawMinusButton.snp.makeConstraints { make in
+            make.height.equalTo(Constants.squareButtonSize)
+            make.width.equalTo(Constants.squareButtonSize)
+            make.top.equalTo(beerTwoQuantityLabel.snp.bottom).offset(50)
+            make.right.equalTo(beerThreeLabel.snp.left).offset(-10)
         }
+        
+        self.view.addSubview(thirdRawPlusButton)
+        let thirdRawPlusAction = UIAction { _ in self.thirdRawPlusButtonPressed() }
         thirdRawPlusButton.addAction(thirdRawPlusAction, for: .touchUpInside)
+        
+        self.thirdRawPlusButton.snp.makeConstraints { make in
+            make.height.equalTo(Constants.squareButtonSize)
+            make.width.equalTo(Constants.squareButtonSize)
+            make.top.equalTo(beerTwoQuantityLabel.snp.bottom).offset(50)
+            make.left.equalTo(beerThreeLabel.snp.right).offset(10)
+        }
     }
     
     private func sellButtonPressed() {
